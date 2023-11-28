@@ -37,6 +37,3 @@ while True:
     if   ori_y <= 60:ori_y=60
 
     LCD.show()
-
-
-
