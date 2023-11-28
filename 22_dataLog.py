@@ -2,7 +2,7 @@ from RP import *
 import utime
 
 LCD = LCD_1inch28()
-LCD.set_bl_pwm(30000)#亮度~65535
+LCD.set_bl_pwm(300)#亮度~65535
 qmi8658=QMI8658()
 Vbat= ADC(Pin(Vbat_Pin))
 
@@ -28,11 +28,11 @@ while True:
         print(round(xyz[i],2),'',end ='')
     print()
     utime.sleep(0.4)
-    
+    '''
     data = open('training','a')
     data.write(str(xyz[0])+','+str(xyz[1])+','+str(xyz[2])+'\n')
     data.close()
-    
+    '''
     #datatab.net使用
 '''
     circle(ori_x+x_shift,ori_y-y_shift,20,LCD.yellow)
