@@ -28,11 +28,11 @@ while True:
         print(round(xyz[i],2),'',end ='')
     print()
     utime.sleep(0.4)
-    
+    '''
     data = open('training','a')
     data.write(str(xyz[0])+','+str(xyz[1])+','+str(xyz[2])+'\n')
     data.close()
-    
+    '''
     #datatab.net使用
 '''
     circle(ori_x+x_shift,ori_y-y_shift,20,LCD.yellow)

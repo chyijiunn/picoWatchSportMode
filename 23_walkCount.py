@@ -12,10 +12,11 @@ def circle(cx,cy,rr,color=LCD.white):
         for j in range(-rr,rr,1):
             if i*i + j*j <= rr*rr:
                 LCD.pixel(cx+i,cy-j,color)
+                
 def COUNT(NUM):
     LCD.fill(LCD.cyan)
-    LCD.text(str(NUM),105,120,LCD.white)
-    LCD.show()
+    LCD.text(str(NUM),110,200,LCD.white)
+
 
 while True:
     xyz=qmi8658.Read_XYZ()
@@ -25,5 +26,8 @@ while True:
     N2 = xyz[5]
     if N1*N2 < 0:
         NUM=NUM+1
-        COUNT(int(NUM/2))
+        step = int(NUM/2)
+        COUNT(step)
+        circle(120,120,step)
+    LCD.show()
         #print(int(NUM/2))
