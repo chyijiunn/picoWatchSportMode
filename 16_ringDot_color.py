@@ -27,7 +27,9 @@ while 1:
     time.sleep(0.1)
     xyz=qmi8658.Read_XYZ()
     N2 = xyz[5]
-    if N1*N2 < 0:NUM=NUM+1
+    if N1*N2 < 0:
+        NUM=NUM+1
+        step = NUM/2
     reach = float(NUM/TARGET)
     runDotRing(reach,110,color(NUM,180,NUM))#點繞行
     LCD.text(str(reach*100)+'%',110,120,color(NUM,180,NUM))
