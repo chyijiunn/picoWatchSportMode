@@ -2,10 +2,12 @@ import time , RP, math
 
 LCD = RP.LCD_1inch28()
 qmi8658 = RP.QMI8658()
-LCD.set_bl_pwm(15535)
+LCD.set_bl_pwm(535)
+
 cx , cy =120 ,120 #center of watch
 NUM = 0
-TARGET = 1000#每天要走幾步
+step = 0
+TARGET = 100#每天要走幾步
                 
 def runDotRing(reach , spinLen , color):
     r = 12
@@ -28,11 +30,11 @@ while 1:
     xyz=qmi8658.Read_XYZ()
     N2 = xyz[5]
     if N1*N2 < 0:
-        NUM=NUM+1
+        NUM = NUM + 1
         step = NUM/2
-    reach = float(NUM/TARGET)
+    reach = step/TARGET
     runDotRing(reach,110,color(NUM,180,NUM))#點繞行
-    LCD.text(str(reach*100)+'%',110,120,color(NUM,180,NUM))
+    LCD.text(str(int(reach*100))+'%',110,120,color(int(reach*128),180,int(reach*128)))
     LCD.show()
-    LCD.fill_rect(110,120,50,10,color(255,255,255))
+    LCD.fill_rect(110,120,50,10,LCD.white)
 
