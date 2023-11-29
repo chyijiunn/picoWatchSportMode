@@ -11,10 +11,11 @@ LCD.fill(color(0,0,0))
 ori_x , ori_y = 120 ,120 
 while True:
     xyz = RP.QMI8658().Read_XYZ()
-    LCD.pixel(ori_x+int(50*xyz[1]),ori_y-int(50*xyz[0]),color(255,255,255))
-    ori_x = ori_x+int(xyz[1])
-    ori_y = ori_y - int(xyz[0])
+    LCD.pixel(ori_x+int(5*xyz[1]),ori_y-int(5*xyz[0]),color(255,255,255))
+    ori_x = ori_x+int(5*xyz[1])
+    ori_y = ori_y - int(5*xyz[0])
     
-    if ori_x > 200:
+    if ori_x > 240:
         from stoptime import *
         stoptime_main()
+        break
