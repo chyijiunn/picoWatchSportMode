@@ -25,7 +25,7 @@ while True:
     
     xyz=qmi8658.Read_XYZ()
     x_shift = int(xyz[3]/10)
-    y_shift = int(xyz[4])
+    y_shift = int(xyz[4]/10)
     circle(ori_x+x_shift,ori_y-y_shift,20,LCD.yellow)
     
     ori_x = ori_x - x_shift
