@@ -2,7 +2,7 @@ from RP import *
 import utime
 
 LCD = LCD_1inch28()
-LCD.set_bl_pwm(300)#亮度~65535
+LCD.set_bl_pwm(30000)#亮度~65535
 qmi8658=QMI8658()
 Vbat= ADC(Pin(Vbat_Pin))
 

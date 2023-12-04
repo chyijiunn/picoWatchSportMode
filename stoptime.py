@@ -1,5 +1,5 @@
 from machine import Pin, SPI
-from fonts.romfonts import vga2_16x32 as font
+from fonts import vga2_16x32 as font
 import gc9a01py as gc9a01
 import random ,utime ,RP
 spi = SPI(1, baudrate=62500000, sck=Pin(10), mosi=Pin(11))

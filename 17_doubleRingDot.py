@@ -2,7 +2,7 @@ import time , RP, math
 
 LCD = RP.LCD_1inch28()
 qmi8658 = RP.QMI8658()
-LCD.set_bl_pwm(535)
+LCD.set_bl_pwm(30000)
 
 cx , cy =120 ,120 #center of watch
 walknum = 0
