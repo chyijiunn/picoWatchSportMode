@@ -1,5 +1,5 @@
-## 三軸加速器使用
-1. 有關加速器[說明](https://patentimages.storage.googleapis.com/c7/a6/7e/e491037fced6df/CN103712632B.pdf)
+## 三軸加速度感測器使用
+1. 有關感測器[說明](https://patentimages.storage.googleapis.com/c7/a6/7e/e491037fced6df/CN103712632B.pdf)
 2. 圖例
 		1. [角動量](https://www.youtube.com/watch?v=ty9QSiVC2g0)
 		2. [陀螺儀原理](https://kknews.cc/news/n2pzge8.html)
@@ -8,7 +8,7 @@
 		5. [走路模型](https://itw01.com/9ZHEBF9.html)
 		6. [幾種測試加速度模型](https://www.youtube.com/watch?v=XhBHp8tUWPQ)
 		 Z軸加速度為1，即為地心加速度
-		 
+
 ## 程式碼
 1. 練習六軸的資料，看數值變化與方向的關聯性，利用六軸的加速度方向 xyz [0]~[2] 來控制螢幕上的點
 2. 利用六軸的角加速度 xyz [3]~[6] 來控制螢幕上的點
