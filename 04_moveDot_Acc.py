@@ -5,7 +5,7 @@ LCD.set_bl_pwm(30000)#亮度~65535
 qmi8658=QMI8658()
 Vbat= ADC(Pin(Vbat_Pin))
 
-r = 10
+r = 5
 ori_x = 120
 ori_y = 120
 while True:
