@@ -6,7 +6,5 @@ qmi8658=QMI8658()
 
 while True:
     xyz=qmi8658.Read_XYZ()
-    print(xyz[1])
-
-
-
+    print(xyz[5])
+    time.sleep(0.5)

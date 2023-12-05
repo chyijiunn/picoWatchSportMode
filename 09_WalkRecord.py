@@ -15,7 +15,7 @@ comColor = (256-R,256-G,256-B)
 BG = color(R,G,B)
 FC = color(comColor)
 LCD.fill(BG)
-data = open('Record','a')
+data = open('record_fix.csv','a')
 
 while True:
     xyz0 = RP.QMI8658().Read_XYZ()#Data_ini
@@ -26,9 +26,10 @@ while True:
     H =int(M//60)#時
     now = str(H)+':'+str(M%60)+':'+str(S%60)+'.'+str(cS%100)
     LCD.text(font,now,digitalxstart,digitalystart,FC,BG)
-    utime.sleep(0.05)
     xyz1 = RP.QMI8658().Read_XYZ()#Data_Final
     
     #print(now,',',xyz1[3]-xyz0[3],',',xyz1[4]-xyz0[4],',',xyz1[5]-xyz0[5])
-    if xyz1[5]*xyz0[5]<0:
-        data.write(str(now)+','+str(round(100*(xyz1[3]-xyz0[3]),2))+','+str(round(100*(xyz1[4]-xyz0[4]),2))+','+str(round(100*(xyz1[5]-xyz0[5]),2))+'\n')
+
+    if xyz1[5]*xyz0[5]<0:#為了看出區別，放大scale
+        data.write(str(now)+','+str(round(1000*xyz1[0],3)) +','+str(1000*round(xyz1[1],3))+','+str(1000*round(xyz1[2],3))+','+str(round(100*(xyz1[3]-xyz0[3]),2))+','+str(round(100*(xyz1[4]-xyz0[4]),2))+','+str(round(100*(xyz1[5]-xyz0[5]),2))+'\n')
+        #data.write(str(now)+','+str(round(xyz1[3]-xyz0[3],2))+','+str(round(xyz1[4]-xyz0[4],2))+','+str(round(xyz1[5]-xyz0[5],2))+'\n')
