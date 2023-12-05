@@ -30,7 +30,7 @@ while 1:
     xyz=qmi8658.Read_XYZ()
     N1 = xyz[5]
     now = list(time.gmtime())
-    LCD._text16(font,'{0:0>2}:{1:0>2}:{2:0>2}'.format(now[3],now[4],now[5]),60,160,color(0,0,0),color(255,225,0))
+    LCD._text16(font,'{0:0>2}:{1:0>2}:{2:0>2}'.format(now[3],now[4],now[5]),60,140,color(0,0,0),color(255,225,0))
     xyz=qmi8658.Read_XYZ()
     N2 = xyz[5]
     
@@ -46,4 +46,4 @@ while 1:
     colorfactorR = int(255*(1-runreach))
     
     runDotRing(walkreach,110,color(colorfactorW,200,colorfactorW))
-    runDotRing(runreach,88,color(colorfactorR,180,180))
+    runDotRing(runreach,88,color(100,colorfactorR,colorfactorR))
