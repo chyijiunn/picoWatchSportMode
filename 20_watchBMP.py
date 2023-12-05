@@ -11,4 +11,5 @@ LCD.fill(color(255,225,0))
 LCD.bitmap(batman,90,90)
 while 1:
     now = list(time.gmtime())
-    LCD._text16(font,str(now[3])+':'+str(now[4])+':'+str(now[5]),60,160,color(0,0,0),color(255,225,0))
+    #LCD._text16(font,str(now[3])+':'+str(now[4])+':'+str(now[5]),60,160,color(0,0,0),color(255,225,0))
+    LCD._text16(font,'{0:0>2}:{1:0>2}:{2:0>2}'.format(now[3],now[4],now[5]),60,160,color(0,0,0),color(255,225,0))
