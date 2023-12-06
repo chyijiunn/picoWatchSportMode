@@ -52,10 +52,10 @@
 3. 將運動資料轉為圖形化介面，借用上次的紅點秒針，改為繞行，但不刷新螢幕，可以填滿外圈
 4. 若達成本日走路步數目標，可繞行螢幕一圈
 5. 增加跑步資料，列為內圈
-1. 在裡面畫圖，使用點陣圖檔，太大記憶體會不夠用，建議縮小到 64*64
+1. 在裡面畫圖，使用點陣圖檔，避免記憶體會不夠用，建議[縮小解析度](https://imageresizer.com)
 	- 用python3
 	- 於終端機輸入 python3 18_imgtobitmap.py media/batman.bmp 4
-	- 執行 18_imgtobitmap.py 這個程式 用於檔案 media/資料夾下的 batman 圖檔深度為 4 位元
+	- 執行 18_imgtobitmap.py 這個程式 用於檔案 media/資料夾下的 batman.bmp 檔案深度為 4 位元（16色）
 	- 執行後，另存檔案，含附檔名 .py，上傳到 pico 根目錄
 1. LCD.bitmap(batman,90,90)用法
 1. 錶面和時間結合在一起
