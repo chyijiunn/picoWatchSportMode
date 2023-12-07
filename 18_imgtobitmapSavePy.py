@@ -1,6 +1,6 @@
 '''
 修改自 imgtobitmap.py
-於終端機輸入 python3 18_imgtobitmap.py media/filename.bmp 8
+於終端機輸入 python3 18_imgtobitmapSavePy.py media/filename.bmp 8
 注意檔案大小建議 120*120 -> 8 bit , 180*180 -> 7bit 
 執行結束儲存成 bmp.py
 '''
