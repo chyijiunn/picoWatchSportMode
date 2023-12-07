@@ -1,3 +1,9 @@
+# 讀取走路的角加速度差異值，並記錄
+# 記錄
+#     1.utime.ticks_ms() 時間差
+#     2.同時呈現碼錶面資料
+#     3.角加速度 - 利用手部晃動時，若加速度發生正負變換，就記錄
+
 from machine import Pin, SPI
 from fonts import vga2_16x32 as font
 import gc9a01py as gc9a01

@@ -1,8 +1,10 @@
+# 一個簡易碼錶範例
+# 往右傾斜進入右方後開始記錄 N1
+# 往左傾斜進入左方後記錄 N2，兩個相減得秒數差
 from RP import *
 import utime
-
 LCD = LCD_1inch28()
-LCD.set_bl_pwm(30000)#亮度~65535
+LCD.set_bl_pwm(30000)
 qmi8658=QMI8658()
 Vbat= ADC(Pin(Vbat_Pin))
 
@@ -26,6 +28,7 @@ while True:
     xyz=qmi8658.Read_XYZ()
     x_shift = int(xyz[3]/10)
     y_shift = int(xyz[4]/10)
+
     circle(ori_x+x_shift,ori_y-y_shift,20,LCD.yellow)
     
     ori_x = ori_x - x_shift

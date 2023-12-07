@@ -1,7 +1,8 @@
+#利用六軸的角加速度 xyz [3]~[6] 來控制螢幕上的點
 from RP import *
 
 LCD = LCD_1inch28()
-LCD.set_bl_pwm(30000)#亮度~65535
+LCD.set_bl_pwm(30000)
 qmi8658=QMI8658()
 Vbat= ADC(Pin(Vbat_Pin))
 
@@ -16,9 +17,11 @@ while True:
     for i in range(-r,r,1):
         for j in range(-r,r,1):
             if i*i + j*j <= r*r:
-                LCD.pixel(ori_x+j+y_shift,ori_y+i-x_shift,LCD.white)
-    ori_x = ori_x - x_shift
-    ori_y = ori_y - y_shift
+                #往右傾斜，yw = xyz[4]增加，需加在螢幕 x 座標，所以為 ori_x + y_shift
+                #往上傾斜，xw = xyz[3]增加，需[減]螢幕 y 座標，所以為 ori_y - x_shift
+                LCD.pixel(ori_x+y_shift+j,ori_y-x_shift+i,LCD.white)
+    ori_x = ori_x - y_shift
+    ori_y = ori_y - x_shift
     if   ori_x >= 150:ori_x=150
     if   ori_x <= 90:ori_x=90
     if   ori_y >= 200:ori_y=200
@@ -29,6 +32,3 @@ while True:
     LCD.text("w_y",160,25,LCD.white)
     LCD.text(str(round(xyz[4],1)),150,40,LCD.white)
     LCD.show()
-
-
-

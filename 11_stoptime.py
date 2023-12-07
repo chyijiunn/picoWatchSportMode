@@ -1,3 +1,4 @@
+# 修改檔名，去掉前面數字，上傳於 pico 內，並作 import
 from machine import Pin, SPI
 from fonts import vga2_16x32 as font
 import gc9a01py as gc9a01

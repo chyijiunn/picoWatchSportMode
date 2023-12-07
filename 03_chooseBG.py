@@ -1,7 +1,7 @@
+# 製作背景選單，使點可以選擇左邊或右邊的圈
 from RP import *
-
 LCD = LCD_1inch28()
-LCD.set_bl_pwm(30000)#亮度~65535
+LCD.set_bl_pwm(30000)
 qmi8658=QMI8658()
 Vbat= ADC(Pin(Vbat_Pin))
 
