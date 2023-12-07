@@ -1,7 +1,7 @@
 '''
 用python3
-於終端機輸入 python3 18_imgtobitmap.py media/batman.bmp 4
-執行 18_imgtobitmap.py 這個程式 用於檔案 media/資料夾下的 batman 圖檔深度為 4 位元
+於終端機輸入 python3 18_imgtobitmap.py media/filename.bmp 4
+執行 18_imgtobitmap.py 這個程式 用於檔案 media/資料夾下的 file 圖檔深度為 4 位元 = 2^4 colors
 執行後，另存檔案，含附檔名 .py，上傳到 pico 根目錄
 '''
 from PIL import Image

@@ -1,7 +1,7 @@
 from machine import Pin, SPI, ADC
 from fonts import vga2_16x32 as fontL
 from fonts import vga2_8x16 as fontS
-import time  ,math,RP,batman#記得引入 轉檔後 檔名
+import time  ,math,RP,bmp#記得引入 轉檔後 檔名
 import gc9a01py as gc9a01
 
 spi = SPI(1, baudrate=62500000, sck=Pin(10), mosi=Pin(11))
@@ -14,7 +14,7 @@ Vbat= ADC(Pin(Vbat_Pin))
 BG = color(255,225,0)
 FG = color(0,0,0)
 LCD.fill(BG)
-LCD.bitmap(batman,90,90)
+LCD.bitmap(bmp,90,90)
 
 walknum = 0
 walkTARGET = 100 # 每天要走幾步

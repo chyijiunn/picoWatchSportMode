@@ -1,6 +1,6 @@
 from machine import Pin, SPI
 from fonts import vga2_16x32 as font
-import time  ,math,RP,batman#記得引入 轉檔後 檔名
+import time  ,math,RP,bmp#記得引入 轉檔後 檔名
 import gc9a01py as gc9a01
 
 spi = SPI(1, baudrate=62500000, sck=Pin(10), mosi=Pin(11))
@@ -9,7 +9,7 @@ color = gc9a01.color565
 qmi8658 = RP.QMI8658()
 
 LCD.fill(color(255,225,0))
-LCD.bitmap(batman,90,90)
+LCD.bitmap(bmp,90,90)
 
 cx , cy =120 ,120 #center of watch
 NUM = 0
