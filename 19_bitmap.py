@@ -1,6 +1,6 @@
 from machine import Pin, SPI
 from fonts import vga2_16x16 as font
-import time , batman #記得引入 batman
+import time , bmp #記得引入 bmp
 import gc9a01py as gc9a01
 
 spi = SPI(1, baudrate=62500000, sck=Pin(10), mosi=Pin(11))
@@ -8,4 +8,4 @@ LCD = gc9a01.GC9A01(spi,dc=Pin(8, Pin.OUT),cs=Pin(9, Pin.OUT),reset=Pin(12, Pin.
 color = gc9a01.color565
 
 LCD.fill(color(255,225,0))
-LCD.bitmap(batman,90,90)
+LCD.bitmap(bmp,90,90)
