@@ -8,4 +8,5 @@ LCD = gc9a01.GC9A01(spi,dc=Pin(8, Pin.OUT),cs=Pin(9, Pin.OUT),reset=Pin(12, Pin.
 color = gc9a01.color565
 
 LCD.fill(color(255,225,0))
+# LCD.bitmap(檔名.py,起始 x ,起始 y)
 LCD.bitmap(bmp,90,90)

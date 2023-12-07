@@ -1,3 +1,4 @@
+# 加上跑步資料在內圈
 from machine import Pin, SPI
 from fonts import vga2_16x32 as font
 import time  ,math,RP,bmp#記得引入 轉檔後 檔名

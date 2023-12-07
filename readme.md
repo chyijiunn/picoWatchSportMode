@@ -58,7 +58,7 @@
 	- 於終端機輸入 python3 18_imgtobitmap.py media/batman.bmp 4
 	- 執行 18_imgtobitmap.py 這個程式 用於檔案 media/資料夾下的 batman.bmp 檔案深度為 4 位元（16色）
 	- 執行後，另存檔案，含附檔名 .py，上傳到 pico 根目錄
-1. LCD.bitmap(batman,90,90)用法
+1. LCD.bitmap(檔名.py,起始 x ,起始 y)用法
 1. 錶面和時間結合在一起
 1. 結合走路資料在外圈
 1. 加上跑步資料在內圈

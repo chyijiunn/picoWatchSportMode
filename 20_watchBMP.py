@@ -1,3 +1,4 @@
+# 錶面和時間結合在一起
 from machine import Pin, SPI
 from fonts import vga2_16x32 as font
 import time , bmp #記得引入 轉檔後 檔名

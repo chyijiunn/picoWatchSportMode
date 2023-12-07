@@ -1,3 +1,4 @@
+# 搭配前面蝙蝠俠，改了顏色
 from machine import Pin, SPI, ADC
 from fonts import vga2_16x32 as fontL
 from fonts import vga2_8x16 as fontS
