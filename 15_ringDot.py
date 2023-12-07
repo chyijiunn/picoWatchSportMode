@@ -1,3 +1,5 @@
+# 將運動資料轉為圖形化介面，用上次的紅點秒針，
+# 改為繞行，但不刷新螢幕，可以填滿外圈
 import time , RP, math
 
 LCD = RP.LCD_1inch28()
@@ -5,11 +7,12 @@ qmi8658 = RP.QMI8658()
 LCD.set_bl_pwm(15535)
 cx , cy =120 ,120 #center of watch
 NUM = 0
-TARGET = 100
+TARGET = 100#一天行走的目標
                 
 def runDotRing(tic , spinLen , color):
     r = 10
-    #now = list(time.localtime())
+    # NUM/TARGET 行走目標百分比*360即佔一個圈的角度
+    # 轉弧度回來，再 sin、之後轉給 x 座標用
     x = int(spinLen*math.sin(math.radians(NUM/TARGET*360)))
     y = int(spinLen*math.cos(math.radians(NUM/TARGET*360)))
     for i in range(-r,r,1):

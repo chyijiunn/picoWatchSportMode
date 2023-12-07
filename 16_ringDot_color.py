@@ -1,17 +1,17 @@
+# 若達成本日走路步數目標，可繞行螢幕一圈
+# 但超過一圈顏色有所重疊，藉資料變動讓顏色有變化 36th line
 import time , RP, math
-
 LCD = RP.LCD_1inch28()
 qmi8658 = RP.QMI8658()
 LCD.set_bl_pwm(30000)
 
-cx , cy =120 ,120 #center of watch
+cx , cy =120 ,120
 NUM = 0
 step = 0
-TARGET = 100#每天要走幾步
+TARGET = 100
                 
 def runDotRing(reach , spinLen , color):
     r = 12
-    #now = list(time.localtime())
     x = int(spinLen*math.sin(math.radians(reach*360)))
     y = int(spinLen*math.cos(math.radians(reach*360)))
     for i in range(-r,r,1):
@@ -31,8 +31,7 @@ while 1:
     N2 = xyz[5]
     if N1*N2 < 0:
         NUM = NUM + 1
-        step = NUM/2
-    reach = step/TARGET
+    reach = NUM/TARGET
     runDotRing(reach,110,color(NUM,180,NUM))#點繞行
     LCD.text(str(int(reach*100))+'%',110,120,color(int(reach*128),180,int(reach*128)))
     LCD.show()
