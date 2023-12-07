@@ -41,13 +41,14 @@
 		1. 碼表程式寫成一個函式，並設立 break 條件，若滿足 break 條件則跳出 while 迴圈
 		2. 原始 if 條件式也需要 break，否則會再度進入碼表程式
 8. 修改檔名碼錶，去掉前面數字，上傳於 pico 內，並作 import 
+1. 把資料呈現出來，看看哪個軸的資料值得[記錄](https://docs.google.com/spreadsheets/d/19RdWxvHaYl9hbu7OO5hfmYfEGUUZPEqCJFpyfEXSq3c/edit?usp=sharing)
 9. 讀取走路的角加速度差異值，並記錄下，需要記錄
 	1.  utime.ticks_ms() 時間差
 	2. 同時呈現碼錶面資料
 	3. 角加速度差異
 		- 利用手部晃動時，若加速度發生正負變換，就記錄
 		- 同樣的方式，可以記錄跑步和走路的差異，並設立閾值(之後)
-1. 把走路資料寫出來，看看哪個軸的資料值得[記錄](https://docs.google.com/spreadsheets/d/19RdWxvHaYl9hbu7OO5hfmYfEGUUZPEqCJFpyfEXSq3c/edit?usp=sharing)
+
 2. 寫一個計步器
 3. 將運動資料轉為圖形化介面，借用上次的紅點秒針，改為繞行，但不刷新螢幕，可以填滿外圈
 4. 若達成本日走路步數目標，可繞行螢幕一圈
