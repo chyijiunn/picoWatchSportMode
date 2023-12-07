@@ -1,7 +1,7 @@
 from machine import Pin, SPI, ADC
 from fonts import vga2_16x32 as fontL
 from fonts import vga2_8x16 as fontS
-import time , batman ,math,RP#記得引入 batman
+import time  ,math,RP,batman#記得引入 轉檔後 檔名
 import gc9a01py as gc9a01
 
 spi = SPI(1, baudrate=62500000, sck=Pin(10), mosi=Pin(11))
