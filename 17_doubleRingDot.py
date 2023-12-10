@@ -30,10 +30,11 @@ while 1:
     time.sleep(0.05)
     xyz=qmi8658.Read_XYZ()
     N2 = xyz[5]
+    y = xyz[1]
     if N1*N2 < 0:#這裡以個人的資料來定義
         if (N1>10 and N1<threhold) or (N2>10 and N2<threhold):
             walknum = walknum + 1
-        elif ((N1 or N2) > threhold) or ((N1 or N2)< -threhold):
+        elif (((N1 or N2) > threhold) or ((N1 or N2)< -threhold))and y < - 0.8:
             runnum = runnum + 1
             
     walkreach = walknum/walkTARGET

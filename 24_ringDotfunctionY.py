@@ -56,11 +56,11 @@ while 1:
     LCD._text16(fontL,'{0:0>2}:{1:0>2}:{2:0>2}'.format(now[3],now[4],now[5]),55,60,FG,BG)
     xyz=qmi8658.Read_XYZ()
     N2 = xyz[5]
-    
+    y = xyz[1]
     if N1*N2 < 0:
         if (N1>10 and N1<threhold) or (N2>10 and N2<threhold):
             walknum = walknum + 1
-        elif (N1 or N2) > threhold or (N1 or N2)< -threhold :
+        elif (((N1 or N2) > threhold) or ((N1 or N2)< -threhold))and y < - 0.8 :
             runnum = runnum + 1
             
     walkreach = walknum/walkTARGET
