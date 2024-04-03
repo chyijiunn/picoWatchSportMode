@@ -7,4 +7,4 @@ qmi8658=QMI8658()
 
 while True:
     xyz=qmi8658.Read_XYZ()
-    print(xyz[5])#xyz[] from 0~6
+    print(xyz[4])#xyz[] from 0~6
