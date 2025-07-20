@@ -2,7 +2,6 @@
 1. 感測器
 	- [角動量](https://www.youtube.com/watch?v=ty9QSiVC2g0)
 	- [陀螺儀原理](https://kknews.cc/news/n2pzge8.html)
-	- [感測器結構]
 	- [MEMS Accelerometers , gyroscope](https://www.youtube.com/watch?v=KuekQ-m9xpw)
 	- [幾種測試加速度模型](https://www.youtube.com/watch?v=XhBHp8tUWPQ)
 		Z軸加速度為1，即為地心加速度
